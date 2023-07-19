@@ -1,0 +1,10 @@
+@media (max-width: 375px) {
+  .rating-box {
+    max-width: 325px;
+  }
+
+  .rating-box ul {
+    margin: 25px 20px 20px 25px;
+    justify-content: space-between;
+  }
+}

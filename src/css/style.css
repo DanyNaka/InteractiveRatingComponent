@@ -1,0 +1,163 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --lightgrey: hsl(217, 12%, 63%);
+  --mediumgrey: hsl(216, 12%, 54%);
+  --darkgrey: #252c36;
+  --darkblue: #1c232d;
+  --verydarkblue: hsl(216, 12%, 8%);
+
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--verydarkblue);
+  color: var(--white);
+  width: 100%;
+  height: 100%;
+}
+
+p {
+  color: var(--mediumgrey);
+  margin: 0 28px;
+  font-size: 0.9rem;
+  text-align: left;
+  line-height: 1.5rem;
+}
+
+/* -------------- rating-box -------------- */
+.rating-box,
+.thank-box {
+  position: absolute;
+  z-index: 99999999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--darkblue);
+  width: 350px;
+  border-radius: 20px;
+}
+
+.rating-box img {
+  background-color: var(--darkgrey);
+  border-radius: 50%;
+  margin: 20px 25px;
+  padding: 13px;
+}
+
+.rating-box h1 {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  margin-left: 28px;
+  margin-bottom: 15px;
+}
+
+.rating-box ul {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  /* gap: 2px; */
+  margin: 15px 28px 15px 28px;
+}
+
+.rating-box li {
+  background-color: var(--darkgrey);
+  color: var(--mediumgrey);
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  border-radius: 50%;
+  padding: 15px;
+  /* margin-right: 20px; */
+}
+
+.rating-box li:hover {
+  background-color: var(--lightgrey);
+  color: var(--white);
+}
+
+.rating-box ul li.selecao.selecionado,
+.rating-box ul li:active {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.rating-box button {
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border: none;
+  border-radius: 20px;
+  margin: 5px 28px 25px 28px;
+  padding: 15px;
+  width: 285px;
+}
+
+.rating-box button:hover,
+.rating-box button:active {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* -------------- thank-box -------------- */
+.thank-box {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thank-box .cellphone {
+  width: 150px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.thank-box .rating-text {
+  background-color: var(--darkgrey);
+  width: fit-content;
+  color: var(--orange);
+  border-radius: 30px;
+  padding: 3px 25px;
+  font-size: 1.1;
+  margin-top: 10px;
+}
+
+.thank-box h2 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.thank-box .appreciate {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 1rem;
+}
+footer {
+  /* width: 350px;
+  position: fixed;
+  z-index: 1;
+  left: 350px;
+  top: 80%; */
+  /*  */
+
+  position: absolute;
+  z-index: 99999999;
+  bottom: 0;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -30%);
+}
+
+footer p {
+  position: relative;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--lightgrey);
+  font-weight: 700;
+}
